@@ -61,4 +61,25 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 
+    def lifecycleVersion = "2.2.0"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    // alternatively - just ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion" // For Kotlin use lifecycle-viewmodel-ktx
+
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2' // updated 02.03.20 // 2.7.+ -> min sdk 21
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2' // updated 02.03.20 // 2.7.+ -> min sdk 21
+
+    // RxJava
+    def rxjavaVersion = '2.1.1'
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+
+    // Rx-Retrofit Call Adapter
+    def rxcalladapterVersion = '2.5.0'
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxcalladapterVersion" // Retrofit call adapter
+
+    // Reactive Streams (convert Observable to LiveData)
+    def reactivestreamsVersion = "1.1.1"
+    implementation "android.arch.lifecycle:reactivestreams:$reactivestreamsVersion"
 }
